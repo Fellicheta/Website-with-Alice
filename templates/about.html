@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>О чем этот сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-image: url("{{ url_for('static', filename='new_1.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: rgb(166, 24, 154);
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            position: relative; /* для позиционирования ссылки */
+        }
+
+    .tile-container {
+        display: flex;
+        flex-direction: column; /* Устанавливаем вертикальное направление */
+        align-items: flex-start; /* Выравнивание по левому краю */
+        gap: 40px; /* Сохраняем отступы между элементами */
+        max-width: 300px; /* Ограничиваем ширину контейнера */
+        width: fit-content; /* Ширина по содержимому */
+        position: absolute; /* Фиксируем положение слева */
+        left: 120px; /* Отступ от левого края */
+        top: 100px; /* Отступ сверху */
+}
+
+        .tile {
+            width: 280px;
+            height: 200px;
+            background: linear-gradient(145deg, #ffffff, #e6e6e6);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tile:hover {
+            box-shadow: inset 8px 8px 16px #d1d1d1, inset -8px -8px 16px #ffffff;
+            transform: translateY(-5px);
+        }
+
+        .tile h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #2c3e50;
+        }
+
+        .tile p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.4;
+            color: #555;
+        }
+
+        /* Стиль для ссылки «На главную» */
+        .home-link {
+            position: absolute;
+            bottom: 120px;
+            right: 50px;
+            background: rgba(93, 207, 119, 0.9);
+            color: #2c3e50;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px); /* лёгкое размытие фона */
+        }
+
+        .home-link:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.05);
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="tile-container">
+        <!-- Плитка 1 -->
+        <a href="/coaching" class="tile">
+            <h2>Коучинг</h2>
+            <p>Помогаем построить планы и воплотить их в жизнь</p>
+        </a>
+
+        <!-- Плитка 2 -->
+        <a href="/psych" class="tile">
+            <h2>Психология</h2>
+            <p>Даем инструменты для понимания себя и окружающих</p>
+        </a>
+
+        <!-- Плитка 3 -->
+        <a href="/project" class="tile">
+            <h2>Управление проектами</h2>
+            <p>Реализация всего намеченного через четкий план</p>
+        </a>
+
+        <!-- Плитка 4 -->
+        <a href="/education" class="tile">
+            <h2>Курсы и программы обучения</h2>
+            <p>Делимся методиками. Обучаем их использованию.</p>
+        </a>
+    </div>
+
+    <!-- Ссылка «На главную» в правом нижнем углу -->
+    <a href="/" class="home-link">На главную</a>
+</body>
+</html>

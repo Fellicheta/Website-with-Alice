@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            background-image: url("{{ url_for('static', filename='4.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: rgb(0, 0, 0);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* Стили для сайдбара (меню слева) */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: rgba(64, 160, 101, 0.9);
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            font-size: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #2f2f4d;
+            font-size: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .submenu a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #5a5a6a;
+            font-size: 22px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #cce1db;
+        }
+
+        /* Основной контент — смещаем вправо, чтобы не перекрывался меню */
+        .content {
+            margin-left: 150px;
+            padding: 20px;
+            flex: 1;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+            line-height: 1.8;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Сайдбар (меню слева) -->
+    <div class="sidebar">
+        <h2>Меню сайта</h2>
+        <a href="/about">Темы сотрудничества</a>
+                <ul class="submenu">
+                        <a href="coaching">Коучинг</a>
+                        <a href="psych">Психология</a>
+                        <a href="project">Управление Проектами</a>
+                        <a href="education">Курсы и программы обучения</a>
+                </ul>
+         <a href="/resume">Резюме</a>
+        <a href="/services">Услуги</a>
+        <a href="/contacts">Контакты</a>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="content">
+        <h1>Добро пожаловать на мой сайт!</h1>
+        <p>Это главная страница, созданная на Flask.</p>
+        <p>Этот текст я потом превращу во что‑то интересное.</p>
+    </div>
+</body>
+</html>

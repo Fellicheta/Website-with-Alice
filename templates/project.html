@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Коучинг</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+            /* Настройки фона */
+            background-image: url("{{ url_for('static', filename='10.webp') }}");
+            background-size: cover; /* Масштабируем картинку */
+            background-position: center; /* Центрируем изображение */
+            background-repeat: no-repeat; /* Запрещаем повторение */
+            background-attachment: fixed; /* Фиксируем фон при скролле */
+            color: #0a0a0a; /* Цвет текста белый для контраста */
+            min-height: 100vh; /* Минимальная высота на весь экран */
+        }
+
+        a {
+            margin: 0 15px;
+            font-size: 18px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        /* Добавляем тень для текста на фоне */
+        h1, p, a {
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>Управление проектами</h1>
+   <p>На этой странице будет информация по управлению проектами в разных сферах.<p>
+    <p>Раздел находится в стадии разработки, мы скоро вернемся с интересными обновлениями.</p>
+    <a href="/">На главную</a>
+</body>
+</html>
